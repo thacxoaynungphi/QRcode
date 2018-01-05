@@ -8,60 +8,74 @@
 
     <RelativeLayout
         android:id="@+id/layoutTop"
-        android:background="@android:color/darker_gray"
+        android:background="#F8F8F8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textViewCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="haha"
-            android:textSize="20dp"
-            android:layout_margin="10dp"/>
+            android:text="Cancel"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewRoom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="15"
-            android:textSize="20dp"
-            android:layout_alignParentRight="true"/>
+            android:text="Room 1"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"/>
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Welcome !"
+        android:textSize="@dimen/_14sdp"
+        android:background="#80000000"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/layoutTop"/>
 
     <me.dm7.barcodescanner.zxing.ZXingScannerView
         android:id="@+id/barcode_scanner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/layoutBottom"
+        android:layout_height="match_parent"
         android:layout_below="@+id/layoutTop" />
 
-    <LinearLayout
-        android:id="@+id/layoutBottom"
+
+
+
+    <RelativeLayout
+        android:id="@+id/layoutBelow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#80000000"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+        android:padding="@dimen/_10sdp">
         <TextView
-            android:id="@+id/textViewWelcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:padding="10dp"
-            android:text="Welcome !"
-            android:textSize="20dp"
-            android:background="@android:color/holo_green_light"
-            android:textColor="@android:color/black"/>
+        android:id="@+id/textViewErrorWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error Warning"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@android:color/white"/>
 
-        <TextView
-            android:background="@android:color/darker_gray"
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
+        <Switch
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="hehe"
-            android:textSize="20dp"/>
+            android:layout_marginRight="@dimen/_10sdp"
+            android:checked="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
-    </LinearLayout>
 
 </RelativeLayout>
